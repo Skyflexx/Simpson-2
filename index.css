@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* Le box sizing est conseillé pour que les boites s'ajustent à la taille de l'écran. 
+Vertical align permet de retirer le petit espace entre les boites qui est impossible à retirer */
+
+/* -------------------GLOBAL-------------------- */
+
+#wrapper {
+    padding: 0 20%;
+    background-color: #F9D30A;
+    font-family: 'Golos Text', sans-serif;
+    width : 100%;
+}
+
+/* Bannière c'est l'ID concernant l'image en bannière des simpsons. Pinaise c'est simplement le titre Oh pinaise en haut */
+
+#banniere,
+h1, #pinaise {
+    width: 100%;
+}
+
+
+
+header,
+nav,
+aside,
+footer,
+a {
+    color: white;
+}
+
+
+
+nav,
+aside {
+    background-color: #4E92D4;
+}
+
+
+
+/* -------------------HEADER-------------------- */
+
+header,
+figure {
+    text-align: center;
+    margin: 0% auto;
+}
+
+/* S'agit du titre oh pinaise */
+
+#pinaise {    
+    background-color: #4E92D4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;    
+}
+
+
+h1 {
+    color: #F9D30A;
+    margin : 0;    
+}
+
+p{
+    text-align: justify;
+}
+
+/* -------------------- Menu ---------------------- */
+
+
+
+ul {  
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;      
+    border-bottom : 1px dashed white;
+    border-top : 1px solid white;
+    margin : 0px auto;
+    padding : 0;
+    height : 50px;    
+}
+
+li{
+    margin : 5px 5px;
+}
+
+a{
+    text-decoration : none;
+    font-family: 'Montserrat', sans-serif;
+    font-size : 13px;
+    font-weight: bold;
+}
+
+/* -------------------- Main section avec les images du film ---------------------- */
+
+main {
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;   
+}
+
+.movie{          
+    margin: auto ;
+    width : 200px;
+    height : auto;   
+}
+
+#imgmovie{
+    display : flex;
+    flex-wrap: wrap;
+    margin : 0 auto;          
+}
+
+.grap {
+    border : 1px solid grey;
+    margin-bottom : 3px;
+    width : 200px;
+    height : 200px;
+    overflow: hidden; /*Permet de cut l'image*/
+}
+
+
+
+/* -------------------- Article sur Matt ---------------------- */
+
+article {
+    width: 60%;
+    margin: 30px auto;
+}
+
+
+
+aside {
+    text-align: center;
+    margin : 50px auto 20px auto;    
+    padding: 10px 5px;
+    width: 30%;
+}
+
+figcaption {
+    margin: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+
+
+#mattPhoto {
+    width: 90%;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+
+
+/* -------------------- Pied de page ---------------------- */
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    background-color: #2E6EAD;
+    padding: 10px;
+    margin: auto;
+}
+
+/* ---------- FORMAT TABLETTE ---------------------------------------------------- */
+
+@media only screen and (max-width: 900px) {
+
+    #wrapper {
+        padding : 0 5%;       
+    } 
+
+     /* Main :  Modification du main en flex direction column pour que les éléments soient l'un en dessous de l'autre */
+
+     main {        
+        flex-direction : column;
+        align-items: center;            
+    } 
+
+   
+
+    a{
+        padding : 5px;
+        font-size: 15px;
+    } 
+
+    /* Article sur Matt : Modification de la taille */
+
+     aside {
+        padding-top : 0;
+        width: 40%;
+        margin-top : 0;       
+    }
+
+    article {
+        width: 90%;    
+    } 
+
+}
+
+
+/* --------------------------- FORMAT TEL PORTABLE -------------------------*/
+
+/* Media querie pour un tel portable. Le but n'est pas de recopier le CSS mais de simplement indiquer les changements. Utiliser l'inspecteur pour check. */
+
+ @media only screen and (max-width: 768px) {
+
+    #wrapper {
+        padding : 0 ;       
+    } 
+
+    a{        
+        font-size : 11px;        
+    }
+
+    li{
+       text-align: center;
+       padding : 0;
+       margin : 0;   
+    }
+     
+
+    /* Article sur Matt : Modification de la taille */
+
+     aside {        
+        width: 60%;             
+    }
+
+    
+        
+ } 
+
+ 
