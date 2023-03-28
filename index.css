@@ -9,17 +9,21 @@ Vertical align permet de retirer le petit espace entre les boites qui est imposs
 /* -------------------GLOBAL-------------------- */
 
 #wrapper {
+
     padding: 0 20%;
     background-color: #F9D30A;
     font-family: 'Golos Text', sans-serif;
     width : 100%;
+
 }
 
 /* Bannière c'est l'ID concernant l'image en bannière des simpsons. Pinaise c'est simplement le titre Oh pinaise en haut */
 
 #banniere,
 h1, #pinaise {
-    width: 100%;
+
+    width: 100%; /* Taille des blocs de la bannière bleue, du Oh pinaise et du titre "Les simpsons" */
+    
 }
 
 
@@ -29,14 +33,18 @@ nav,
 aside,
 footer,
 a {
-    color: white;
+
+    color: white; /* Couleur des différents textes à mettre en blanc */
+
 }
 
 
 
 nav,
 aside {
-    background-color: #4E92D4;
+
+    background-color: #4E92D4; /* Les différents background à mettre en bleu */
+
 }
 
 
@@ -45,29 +53,36 @@ aside {
 
 header,
 figure {
-    text-align: center;
-    margin: 0% auto;
+    
+    margin: 0% auto; /* les blocs header et l'image sans marges verticales et centré */
+
 }
 
 /* S'agit du titre oh pinaise */
 
-#pinaise {    
+#pinaise {   
+
     background-color: #4E92D4;
-    text-align: center;
+    text-align: center; /* Oooh Pinaise centré */
     font-weight: bold;
     font-size: 20px;
-    padding: 10px 0;
+    padding: 10px 0; /*Un peu de padding pour ajuster la hauteur du bloc bleu "oh pinaise"*/
     margin: 0;    
+
 }
 
 
 h1 {
+
     color: #F9D30A;
     margin : 0;    
+
 }
 
 p{
-    text-align: justify;
+
+    text-align: justify; /*Tout le texte de la page justifié*/
+
 }
 
 /* -------------------- Menu ---------------------- */
@@ -75,98 +90,122 @@ p{
 
 
 ul {  
+    height : 60px;  /*Taille du bloc menu*/
     display : flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*Centre horizontalement les elts menu*/
+    align-items: center; /*Centre verticalement les elts du menu*/
     list-style-type: none;      
     border-bottom : 1px dashed white;
     border-top : 1px solid white;
-    margin : 0px auto;
+    margin : 0px auto; /* Pas de marge verticale pour que le menu bleu soit collé à l'image du header et au main */
     padding : 0;
-    height : 50px;    
+    
+
 }
 
 li{
+
     margin : 5px 5px;
+
 }
 
 a{
-    text-decoration : none;
+
+    text-decoration : none; /* Retire les effets du lien notamment l'underline */
     font-family: 'Montserrat', sans-serif;
     font-size : 13px;
     font-weight: bold;
+
 }
 
 /* -------------------- Main section avec les images du film ---------------------- */
 
 main {
+
     background-color: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;   
+    display: flex; /*Affichage du contenu en row, */
+    align-items: flex-start; /*Affiche correctement l'article Matt Groening vis à vis de son height*/
+    justify-content: space-around; 
+
 }
 
-.movie{          
+.movie{ /* Il s'agit de la taille voulue de la jaquette du film */       
+
     margin: auto ;
     width : 200px;
     height : auto;   
+
 }
 
-#imgmovie{
-    display : flex;
-    flex-wrap: wrap;
-    margin : 0 auto;          
+#imgmovie{ /*Il s'agit de la div dans laquelle est contenue les 3 jaquettes de film à afficher */
+
+    display : flex; /* Pour l'affichage en row */
+    flex-wrap: wrap; /* Pour un retour à la ligne automatique */
+    margin : 0 auto;   
+
 }
 
-.grap {
+.grap { /* Div Pour rogner la jaquette du film correctement */
+
     border : 1px solid grey;
     margin-bottom : 3px;
     width : 200px;
     height : 200px;
-    overflow: hidden; /*Permet de cut l'image*/
+    overflow: hidden; /*Permet de grap l'image*/
+
 }
 
 
+/* -------------------- Article LES SIMPSONS ---------------------- */
+
+
+article {
+
+    width: 60%; /* Taille du gros article vis à vis du reste */
+    margin: 30px auto;
+
+}
 
 /* -------------------- Article sur Matt ---------------------- */
 
-article {
-    width: 60%;
-    margin: 30px auto;
-}
-
-
-
 aside {
+
     text-align: center;
-    margin : 50px auto 20px auto;    
+    margin : 75px auto 20px auto;    
     padding: 10px 5px;
-    width: 30%;
+    width: 30%; /* Taille du bloc article sur matt */
+
 }
 
-figcaption {
+figcaption { /*Texte sur Matt*/
+
     margin: 5px;
     margin-bottom: 5px;
     text-align: justify;
+
 }
 
 
 
 #mattPhoto {
-    width: 90%;
+
+    width: 65%; /* Taille de la photo qui modifie également la taille du bloc */
     border: 1px solid white;
     margin-top: 10px;
+
 }
 
 
 /* -------------------- Pied de page ---------------------- */
 
 footer {
+
     text-align: center;
     font-weight: bold;
-    background-color: #2E6EAD;
+    background-color: #235281;
     padding: 10px;
     margin: auto;
+
 }
 
 /* ---------- FORMAT TABLETTE ---------------------------------------------------- */
@@ -174,33 +213,43 @@ footer {
 @media only screen and (max-width: 900px) {
 
     #wrapper {
-        padding : 0 5%;       
+
+        padding : 0 5%; /* Reduction des bandes jaunes du site */  
+
     } 
 
      /* Main :  Modification du main en flex direction column pour que les éléments soient l'un en dessous de l'autre */
 
-     main {        
+     main {   
+
         flex-direction : column;
-        align-items: center;            
+        align-items: center;    
+
     } 
 
    
 
     a{
+
         padding : 5px;
         font-size: 15px;
+
     } 
 
     /* Article sur Matt : Modification de la taille */
 
      aside {
+
         padding-top : 0;
         width: 40%;
-        margin-top : 0;       
+        margin-top : 0;    
+
     }
 
     article {
+
         width: 90%;    
+
     } 
 
 }
@@ -213,24 +262,32 @@ footer {
  @media only screen and (max-width: 768px) {
 
     #wrapper {
-        padding : 0 ;       
+
+        padding : 0 ;   /* Retrait des bandes jaunes */
+
     } 
 
     a{        
-        font-size : 11px;        
+
+        /* font-size : 11px;    */
+
     }
 
     li{
+
        text-align: center;
        padding : 0;
        margin : 0;   
+
     }
      
 
     /* Article sur Matt : Modification de la taille */
 
-     aside {        
-        width: 60%;             
+     aside {    
+
+        width: 60%;   
+                  
     }
 
     
