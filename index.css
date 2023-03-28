@@ -29,6 +29,7 @@ h1, #pinaise {
 
 
 header,
+#pinaise,
 nav,
 aside,
 footer,
@@ -80,9 +81,9 @@ h1 {
 }
 
 p{
-
+    color : rgb(102, 99, 99);
     text-align: justify; /*Tout le texte de la page justifié*/
-
+    margin-bottom: 30px;
 }
 
 /* -------------------- Menu ---------------------- */
@@ -90,6 +91,7 @@ p{
 
 
 ul {  
+
     height : 60px;  /*Taille du bloc menu*/
     display : flex;
     justify-content: center; /*Centre horizontalement les elts menu*/
@@ -98,8 +100,7 @@ ul {
     border-bottom : 1px dashed white;
     border-top : 1px solid white;
     margin : 0px auto; /* Pas de marge verticale pour que le menu bleu soit collé à l'image du header et au main */
-    padding : 0;
-    
+    padding : 0;   
 
 }
 
@@ -113,7 +114,7 @@ a{
 
     text-decoration : none; /* Retire les effets du lien notamment l'underline */
     font-family: 'Montserrat', sans-serif;
-    font-size : 13px;
+    font-size : 15px;
     font-weight: bold;
 
 }
@@ -139,8 +140,8 @@ main {
 
 #imgmovie{ /*Il s'agit de la div dans laquelle est contenue les 3 jaquettes de film à afficher */
 
-    display : flex; /* Pour l'affichage en row */
-    flex-wrap: wrap; /* Pour un retour à la ligne automatique */
+    display : flex; /* Pour l'affichage en row */   
+    flex-wrap: wrap-reverse; /* Pour un retour à la ligne automatique */
     margin : 0 auto;   
 
 }
@@ -148,9 +149,9 @@ main {
 .grap { /* Div Pour rogner la jaquette du film correctement */
 
     border : 1px solid grey;
-    margin-bottom : 3px;
+    margin : 10px 10px; /* Marge en dessous de chaque img */
     width : 200px;
-    height : 200px;
+    height : 250px;
     overflow: hidden; /*Permet de grap l'image*/
 
 }
@@ -267,9 +268,17 @@ footer {
 
     } 
 
+    ul {     
+
+    height : 100%;
+    flex-direction: column; /*Centre verticalement les elts menu*/   
+    padding : 10px, 0;   
+                  
+    }
+
     /* a{        
 
-         font-size : 11px;  
+         font-size : 11px;  Faire en EM
 
     } */
 
@@ -277,7 +286,7 @@ footer {
 
        text-align: center;
        padding : 0;
-       margin : 0;   
+       
 
     }
      
